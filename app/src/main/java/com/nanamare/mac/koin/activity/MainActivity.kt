@@ -42,4 +42,9 @@ class MainActivity : AppCompatActivity(), PhotoScene {
         Log.d(TAG, error)
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.dropBaseInterface(this)
+    }
+
 }
